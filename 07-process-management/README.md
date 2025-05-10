@@ -170,11 +170,11 @@ systemctl enable service-name
 Process management is crucial for system performance and stability. By using tools like `ps`, `top`, `htop`, `kill`, and `nice`, you can efficiently control and monitor Linux processes.
 
 
-1. What is the difference between "ps aux" and "ps -ef" ?
+1. What is the difference between "ps aux" and "ps -ef"?
 
 Ans: The "ps aux" shows you the memory utilisation it helps in knowing the memory utility of the process, but "ps -ef" does not show you the memory utilisation.
 
-2. What is the difference between "kill" and "kill -9" ?
+2. What is the difference between "kill" and "kill -9"?
 
 Ans: "kill" is used to remove the process and "kill -9" is used to forcefully remove the process.
 
@@ -182,4 +182,4 @@ Ans: "kill" is used to remove the process and "kill -9" is used to forcefully re
 
 Ans: A "process" is an active instance of a program, whereas a "service" is a special type of process running in the background, and it starts at the time of booting of the server.
 
-Yes you can convert a process into service but applications nowdays installation scripts such as application server and websever are starting thier application as processes.
+Yes you can convert a process into a service, but nowadays installation scripts such as application server and web server are starting thier application as processes.
