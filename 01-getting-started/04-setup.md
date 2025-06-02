@@ -28,6 +28,9 @@ docker run -dit `
 
 ### Docker Command to Run Ubuntu Linux Container in mac or linux host (Persistent & Long-Term) 
 
+- Before running the below command, create ubuntu-data folder under /tmp
+  /tmp/ubuntu-data
+
 ```bash
 docker run -dit \
   --name ubuntu-container \
