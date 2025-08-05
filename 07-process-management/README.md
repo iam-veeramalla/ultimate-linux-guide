@@ -19,6 +19,8 @@ A process is an instance of a running program. Linux provides multiple utilities
 - `pkill -9 processname` – Kill all instances of a process
 - `kill -STOP PID` – Stop a running process
 - `kill -CONT PID` – Resume a stopped process
+- `kill -TSTP PID` - SIGSTOP is a signal that pauses a process (like freezing it)
+- `killall process-name` - Kills all processes with the given name
 - `renice -n 10 -p PID` – Lower priority of a process
 - `renice -n -5 -p PID` – Increase priority of a process (requires root)
 
