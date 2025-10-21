@@ -1,0 +1,307 @@
+
+***
+
+#  **Linux Shell Scripting Complete Notes**
+
+These are the notes from abhishek veeramalla sir ,  to the complete guide for mastering **Linux commands**, **shell scripting**, and **DevOps automation**. These notes cover fundamental concepts, practical commands, and best practices for scripting efficiently and with clarity.
+
+***
+
+##  **Table of Contents**
+
+- [Overview](#overview)  
+- [Basic Commands](#basic-commands)  
+- [Writing a Shell Script](#writing-a-shell-script)  
+- [Variables & User Input](#variables--user-input)  
+- [Conditionals and Loops](#conditionals-and-loops)  
+- [Functions](#functions)  
+- [Piping and Redirection](#piping-and-redirection)  
+- [Debugging and Error Handling](#debugging-and-error-handling)  
+- [System Monitoring](#system-monitoring)  
+- [Networking and Logs](#networking-and-logs)  
+- [Node Health Script Example](#node-health-script-example)  
+- [Process Management](#process-management)  
+- [Automation with Cron](#automation-with-cron)  
+- [Signal Handling](#signal-handling)  
+- [Arithmetic Operations](#arithmetic-operations)  
+- [Best Practices](#best-practices)  
+
+***
+
+##  **Overview**
+
+Shell scripting automates Linux/Unix tasks by running a sequence of commands.  
+Start every script with a **shebang** that specifies the interpreter:
+
+```bash
+#!/bin/bash
+```
+
+***
+
+##  **Basic Commands**
+
+| Command           | Description                    |
+|-------------------|-------------------------------|
+| `pwd`             | Print present working directory|
+| `ls`              | List directory contents        |
+| `cd <dir>`        | Change directory               |
+| `mkdir <dir>`     | Make new directory             |
+| `rmdir <dir>`     | Remove empty directory         |
+| `rm -rf <dir>`    | Remove directory recursively   |
+| `touch file.txt`  | Create an empty file           |
+| `cat file.txt`    | Show file contents             |
+| `chmod 777 file`  | Grant all permissions          |
+| `man <cmd>`       | Show command manual            |
+
+***
+
+##  **Writing a Shell Script**
+
+Create and edit a script file:
+
+```bash
+vim script.sh
+```
+
+Example script:
+
+```bash
+#!/bin/bash
+# Author: Abhishek
+# Purpose: Create directory and files
+
+mkdir demo_folder
+cd demo_folder
+touch file1 file2
+echo "Created demo_folder and files"
+```
+
+Give execution permission and run:
+
+```bash
+chmod +x script.sh
+./script.sh
+```
+
+***
+
+##  **Variables & User Input**
+
+```bash
+name="Abhishek"
+echo "Hello, $name"
+
+read -p "Enter your city: " city
+echo "You live in $city"
+```
+
+***
+
+## **Conditionals & Loops**
+
+### If-Else
+
+```bash
+if [ $age -ge 18 ]; then
+  echo "Adult"
+else
+  echo "Minor"
+fi
+```
+
+### For Loop
+
+```bash
+for i in {1..5}; do
+  echo "Number $i"
+done
+```
+
+### While Loop
+
+```bash
+i=1
+while [ $i -le 5 ]; do
+  echo "Count $i"
+  ((i++))
+done
+```
+
+***
+
+##  **Functions**
+
+```bash
+sum() {
+  echo $(($1 + $2))
+}
+sum 10 20
+```
+
+***
+
+##  **Piping and Redirection**
+
+| Symbol | Meaning                    |
+|--------|----------------------------|
+| `>`    | Redirect output            |
+| `>>`   | Append output             |
+| `<`    | Input redirection         |
+| `|`    | Pipe output to next command|
+| `2>`   | Redirect error output     |
+
+Example:
+
+```bash
+ps -ef | grep amazon
+```
+
+***
+
+##  **Debugging & Error Handling**
+
+- Enable debug mode:
+
+  ```bash
+  set -x
+  ```
+  
+- Exit on error:
+
+  ```bash
+  set -e
+  ```
+  
+- Catch pipe errors:
+
+  ```bash
+  set -o pipefail
+  ```
+  
+- Handle signals:
+
+  ```bash
+  trap "echo 'Interrupt detected!'" SIGINT
+  ```
+
+***
+
+##  **System Monitoring Commands**
+
+- `df -h` - Disk space usage  
+- `free -g` - Memory usage  
+- `nproc` - CPU count  
+- `top` - Real-time processes  
+- `ps -ef` - List running processes  
+- `grep "pattern"` - Search text  
+
+***
+
+##  **Networking & Logs**
+
+- `curl https://example.com` - Fetch URL content  
+- `wget file.zip` - Download files  
+- `ping host` - Check connectivity  
+- `netstat -tulnp` - Network connections  
+- `grep "error" logfile` - Extract errors  
+
+***
+
+##  **Node Health Script Example**
+
+```bash
+#!/bin/bash
+echo "Disk Space:"
+df -h
+
+echo "Memory Usage:"
+free -g
+
+echo "CPU Count:"
+nproc
+
+echo "Top Processes:"
+top -b | head -n 10
+```
+
+***
+
+##  **Process Management**
+
+- List processes:
+
+  ```bash
+  ps -ef
+  ```
+  
+- Kill a process:
+
+  ```bash
+  kill <PID>
+  ```
+  
+- Force kill:
+
+  ```bash
+  kill -9 <PID>
+  ```
+  
+- Find processes by name:
+
+  ```bash
+  pgrep <name>
+  ```
+
+***
+
+##  **Automation with Cron**
+
+Edit cron jobs:
+
+```bash
+crontab -e
+```
+
+Example: run script at 10 AM daily
+
+```
+0 10 * * * /path/to/script.sh
+```
+
+***
+
+##  **Signal Handling**
+
+- `SIGINT` - Ctrl+C  
+- `SIGTERM` - Termination  
+- `SIGKILL` - Force kill  
+- Trap signals:
+
+  ```bash
+  trap "echo 'Stop pressing Ctrl+C'" SIGINT
+  ```
+
+***
+
+##  **Arithmetic Operations**
+
+```bash
+x=10; y=5
+echo $((x + y))  # 15
+echo $((x * y))  # 50
+```
+
+***
+
+##  **Best Practices**
+
+- Add **metadata** (author, date, purpose).  
+- Use `set -exo pipefail` in production scripts.  
+- Use meaningful variable names.  
+- Add comments for clarity.  
+- Modularize code with functions.  
+- Version control your scripts on GitHub.
+
+***
+
