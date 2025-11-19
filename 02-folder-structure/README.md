@@ -1,5 +1,6 @@
 # Understanding the Folder Structure
 
+
 ### Explanation of System Directories
 
 ### **Symbolic Links (Less Significant)**

@@ -1,4 +1,4 @@
-# VI Editor Shortcuts 
+# VI Editor Shortcuts
 
 ### Modes in VI Editor
 - **Normal Mode** (default) – Used for navigation and command execution.

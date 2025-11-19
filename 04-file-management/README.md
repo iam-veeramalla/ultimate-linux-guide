@@ -1,4 +1,4 @@
-# File management in Linux
+### File management in Linux
 
 ### File and Directory Management
 1. **`ls`** – Lists files and directories in the current location.
