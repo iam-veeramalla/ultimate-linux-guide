@@ -19,6 +19,14 @@ Output example:
 ```bash
 -rwxr--r-- 1 user group 1234 Mar 28 10:00 myfile.sh
 ```
+File Type Indicators in ls -l
+- `-` (dash): Regular file
+- `d`: Directory
+- `l`: Symbolic link
+- `c`: Character device file (like /dev/tty)
+- `b`: Block device file (like /dev/sda)
+- `p`: Named pipe (FIFO)
+- `s`: Socket
 
 ## Changing Permissions with `chmod`
 ### Using Symbolic Mode
