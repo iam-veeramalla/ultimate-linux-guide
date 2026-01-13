@@ -6,6 +6,7 @@ Monitoring system resources is essential to ensure optimal performance, detect i
 ## Index of Commands Covered
 
 ### CPU and Memory Monitoring
+- `nproc` – Number of Processes
 - `top` – Real-time system monitoring
 - `htop` – Interactive process viewer (requires installation)
 - `vmstat` – Report system performance statistics
