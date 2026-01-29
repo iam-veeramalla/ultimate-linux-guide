@@ -19,6 +19,7 @@
 (a) Hardware Layer
 
 🔹 The physical components of the computer (CPU, RAM, disk, network interfaces, etc.).
+🔹 Operating Systems : An Operating System is an intermediate layer that acts as a bridge between the software (i.e., user and application) and the hardware. It performs tasks such as process management, memory management, file management, etc.
 🔹 The OS interacts with hardware using device drivers.
 (b) Kernel (Core of Linux OS)
 
