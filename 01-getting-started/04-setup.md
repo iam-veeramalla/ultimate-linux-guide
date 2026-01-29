@@ -44,6 +44,8 @@ docker run -dit \
   ubuntu:latest /bin/bash
                  
 ```
+After the container is created run :
+- docker exec -it <cotainer-id> /bin/bash
 
 ## Explanation of Each Parameter
 
