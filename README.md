@@ -17,5 +17,5 @@ Following topics are covered as part of the course and documentation.
 - Linux system monitoring
 - Basic Networking in Linux
 - Disk and Storage management in Linux
-
+- system auidt 
 Please refer to the folders at the root level of this repository to go through the documentation. 
