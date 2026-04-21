@@ -9,11 +9,13 @@ Monitoring system resources is essential to ensure optimal performance, detect i
 - `top` – Real-time system monitoring
 - `htop` – Interactive process viewer (requires installation)
 - `vmstat` – Report system performance statistics
-- `free -m` – Show memory usage
+- `free -m or free -h` – Show memory usage  [memory]
+- `nproc` – number of CPU available in the machine [CPU]
 
 ### Disk Monitoring
 - `df -h` – Check disk space usage
-- `du -sh /path` – Show disk usage of a specific directory
+- `du -sh /path` – Show disk usage of a specific directory [in KB or MB]
+- `du -sh *` – Show disk usage for all the files and directories inside the specific directory [in KB or MB]
 - `iostat` – Display CPU and disk I/O statistics
 
 ### Network Monitoring

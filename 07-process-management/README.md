@@ -16,10 +16,10 @@ A process is an instance of a running program. Linux provides multiple utilities
 - `kill PID` – Terminate a process by PID
 - `pkill processname` – Terminate a process by name
 - `kill -9 PID` – Force kill a process
-- `pkill -9 processname` – Kill all instances of a process
-- `kill -STOP PID` – Stop a running process
+- `pkill -9 processname` – Kills all (instances of a) process with the name 'processname'  
+- `kill -STOP PID` – Stop a running process     
 - `kill -CONT PID` – Resume a stopped process
-- `renice -n 10 -p PID` – Lower priority of a process
+- `renice -n 10 -p PID` – Lower priority of a process   [lesser the number, more the priority, ex:- 3>4>5, 2>10]  
 - `renice -n -5 -p PID` – Increase priority of a process (requires root)
 
 ### Background & Foreground Processes

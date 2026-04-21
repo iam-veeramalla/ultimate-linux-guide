@@ -7,7 +7,7 @@ Managing disks and storage efficiently is crucial for system performance and sta
 
 ### Viewing Disk Information
 - `lsblk` – Display block devices
-- `fdisk -l` – List disk partitions
+- `fdisk -l` – List disk partitions,same as `lsblk` but provides more info about the partition 
 - `blkid` – Show UUIDs of devices
 - `df -h` – Check disk space usage
 - `du -sh /path` – Show size of a directory

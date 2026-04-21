@@ -64,7 +64,7 @@
 ### Working with Multiple Files
 - `:e filename` – Open a **new file**  
 - `:w` – Save file  
-- `:wq` – Save and exit  
+- `:wq!` – Save and exit  
 - `:q!` – Quit **without saving**  
 - `:split filename` – Split screen **horizontally** and open another file  
 - `:vsplit filename` – Split screen **vertically**  

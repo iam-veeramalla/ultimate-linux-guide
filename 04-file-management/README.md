@@ -17,8 +17,8 @@
 12. **`tac file.txt`** – Displays file content in reverse order.
 13. **`less file.txt`** – Opens a file for viewing with scrolling support.
 14. **`more file.txt`** – Similar to `less`, but only moves forward.
-15. **`head -n 10 file.txt`** – Displays the first 10 lines of a file.
-16. **`tail -n 10 file.txt`** – Displays the last 10 lines of a file.
+15. **`head -n(10) file.txt`** – Displays the first 10 lines of a file. [n as 10 here]
+16. **`tail -n(10) file.txt`** – Displays the last 10 lines of a file. [n as 10 here]
 17. **`nano file.txt`** – Opens a simple text editor.
 18. **`vi file.txt`** – Opens a powerful text editor.
 19. **`echo 'Hello' > file.txt`** – Writes text to a file, overwriting existing content.
