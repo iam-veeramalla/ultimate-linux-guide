@@ -99,3 +99,6 @@ umask 022  # Default: 755 for directories, 644 for files
 
 ## Conclusion
 Understanding file permissions is essential for system security and proper file management. Using `chmod`, `chown`, and `chgrp`, you can control access to files and directories efficiently.
+
+## Difference between ps aux and ps -ef
+ps aux shows the memory utilization but ps -ef does not show you the memory utilization. It shows the cp utilization but not the memory 
