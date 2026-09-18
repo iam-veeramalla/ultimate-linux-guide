@@ -1,2 +1,2 @@
-Forked this repository to practice git operations.
+Forked this repository to practice git ops.
 Added to simulate merge conflict.
