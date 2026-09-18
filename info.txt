@@ -1,1 +1,2 @@
 Forked this repository to practice git operations.
+Added to simulate merge conflict.
